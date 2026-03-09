@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown anamata</title>
+</head>
+<body>
+    <h2>Select an option bro :p</h2>
+    <select id="drop" onchange="showSelectedOptionbro()">
+        <option value="Option 1">Gojo Satoru</option>
+        <option value="Option 2">Blue eyed king</option>
+        <option value="Option 3">Strongest sorcerer</option>
+    </select>
+    <p id="selectedOptionanamata"></p>
+    <script>
+        document.getElementById("drop").value="Option 2";
+
+        function showSelectedOptionbro(){
+            var dropdown=document.getElementById("drop");
+            var selectedOptionanamata=dropdown.options[dropdown.selectedIndex].text;
+            document.getElementById("selectedOptionanamata").innerHTML="You selected: " + selectedOptionanamata;
+        }
+    </script>
+</body>
+</html>

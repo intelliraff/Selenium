@@ -10,12 +10,12 @@ public class Dropdown {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\exam2\\Downloads\\selenium-java-4.40.0\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
-        driver.get("");
+        driver.get("C:\\Users\\exam2\\eclipse-workspace\\akhila\\HTML\\hehe.html");
 
-        WebElement dropdown = driver.findElement(By.id("myDropdown"));
+        WebElement dropdown = driver.findElement(By.id("drop"));
         dropdown.click();
 
-        WebElement option = driver.findElement(By.cssSelector("option[value='option1']"));
+        WebElement option = driver.findElement(By.cssSelector("option[value='Option 3']"));
         option.click();
 
         Thread.sleep(3000);
@@ -23,7 +23,7 @@ public class Dropdown {
         String selectedOptionText = option.getText();
         System.out.println("Selected Option: " + selectedOptionText);
 
-        Thread.sleep(2000);
+        Thread.sleep(6000);
 
         driver.quit();
     }
